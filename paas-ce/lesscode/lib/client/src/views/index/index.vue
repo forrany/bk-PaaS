@@ -20,6 +20,7 @@
             <div
                 id="toolActionBox"
                 class="function-and-tool">
+                <mobile-preview></mobile-preview>
                 <operation-select v-model="operationType" />
                 <div style="height: 22px; width: 1px; margin: 0 5px; background-color: #dcdee5;" />
                 <!-- 保存、预览、快捷键等tool单独抽离 -->
@@ -60,6 +61,7 @@
     import ModifierPanel from './components/modifier-panel'
     import OperationArea from './components/operation-area'
     import ActionTool from './components/action-tool'
+    import MobilePreview from './components/preview-switch'
 
     export default {
         components: {
@@ -73,7 +75,8 @@
             MaterialPanel,
             ModifierPanel,
             OperationArea,
-            ActionTool
+            ActionTool,
+            MobilePreview
         },
         data () {
             return {

@@ -9,6 +9,7 @@
             </div>
             <div class="simulator-preview" :style="{ width: width + 'px', height: height + 'px' }">
                 123123123123
+                <van-button type="primary">主要按钮</van-button>
             </div>
         </div>
     </div>
@@ -39,12 +40,13 @@
 </script>
 
 <style lang="postcss" scoped>
-    @import './area.css';
+    @import './area.scss';
 
     .simulator-wrapper {
         position: relative;
         .device-phone-frame {
             z-index: 1;
+            pointer-events: none;
             position: absolute;
             height: 100%;
             width: 100%;
@@ -69,6 +71,9 @@
             width: 100%;
             box-sizing: content-box;
             padding: 5% 6.5% 5.6%;
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
     }
 </style>

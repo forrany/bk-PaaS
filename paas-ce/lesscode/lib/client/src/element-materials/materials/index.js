@@ -11,6 +11,7 @@
 
 import bkComponents, { bkComponentGroupList, bkLink } from './bk'
 import elementComponents, { elementComponentGroupList, eleLink } from './element'
+import vantComponents, { vantComponentGroupList, vanLink } from './vant'
 
 import { componentConfigs as complexComponentConfigs } from '@blueking/bkui-vue-complex'
 
@@ -26,5 +27,7 @@ export default {
     bkComponentGroupList,
     element: elementComponents,
     elementComponentGroupList,
-    infoLink: Object.assign(bkLink, eleLink)
+    vant: vantComponents,
+    vantComponentGroupList,
+    infoLink: Object.assign(bkLink, eleLink, vanLink)
 }

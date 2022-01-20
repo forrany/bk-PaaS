@@ -98,9 +98,9 @@
                 this.change('fontFamily', val)
             },
             handleFontSizeChange (val) {
-                this.fontSizeValue = val
-                const newVal = val === '' ? '' : val + 'px'
-                this.change('fontSize', newVal)
+                const { value, unit } = val
+                this.fontSizeValue = value
+                this.change('fontSize', value + unit)
             },
             handleFontWeightChange (val) {
                 this.fontWeightValue = val
